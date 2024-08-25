@@ -3,9 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Encriptador</title>
+    <title>Encriptador & Desencriptador</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="Image/x-icon" href="assets/codeSonkaPixel.bmp">
 </head>
 <body>
-    
+    <header class="header">
+        <a class="headerIcono" href="https://github.com/EDISONKA02" target="_blank">
+            <img src="assets/LogoAlura.png" alt="Logo de Alura" style="width: 3%;height: auto;border-radius: 50%;">
+        </a>
+        <h1 class="headerTitulo">Alura Challenge - Encriptador de textos</h1>
+    </header>
+    <main>
+        <div class="infoGeneral">
+            <h2>¿Que es?</h2>
+            <p>El algoritmo utilizado es Caesar Cipher, que es un tipo de cifrado por sustitución en el que cada letra en el texto original es reemplazada por una letra que se obtiene a partir de la letra original, descuidando el número de posiciones que se indica.</p>
+        </div>
+        <section>
+            <div class="campoIzquierdo">
+                <textarea id="inputText" placeholder="Introduce tu texto aquí..."></textarea>
+                <br>
+                <span class="info">
+                    <img src="assets/signo-de-exclamacion.png" alt="signo de advertencia">
+                    Solo letras minúsculas y sin tildes.</a>
+                </span>
+                <div class="botones">
+                    <button class="boton-encriptar" type="button" onclick="encriptar()">Encriptar</button>
+                    <button class="boton-desencriptar" type="button" onclick="desencriptar()">Desencriptar</button>
+                </div>
+            </div>
+        </section>
+        <div class="campoDerecho">
+            <img src="assets/errores.png" alt="Lupa con error">
+            <h2>Ningún mensaje fue encontrado</h2>
+            <p>¡Debes ingresar primero el texto que quieres encriptar o desencriptar!</p>
+        </div>
+    </main>
+    <footer>
+        <script src="app.js"></script>
+        <p>Encriptador realizado por <a href="https://www.linkedin.com/in/eago-sonka/" target="_blank">Édison González</a> para <b>AluraLatam</b></p>
+        <p>Agosto 2024</p>    
+    </footer>
 </body>
 </html>
