@@ -6,6 +6,11 @@ const botonDesencriptar = document.getElementById("botonDesencriptar");
 
 const mensajeFinal = document.getElementById("mensajeFinal");
 
+const contenido_derecha_muñeco = document.getElementById("contenido_derecha_muñeco");
+
+const informacionMensajeFinal = document.getElementById("informacionMensajeFinal");
+
+
 //La letra "e" - "enter"
 //La letra "i" - "imes"
 //La letra "a" - "ai"
@@ -21,7 +26,7 @@ let remplazar = [
 ]
 
 botonEncriptar.addEventListener("click", () => {
-    const texto = textoUsuario.ariaValueMax.toLowerCase();
+    const texto = textoUsuario.value.toLowerCase();
     function botonEncriptar(newtext) {
         for(let i = 0; i < remplazar.length; i++) {
             if (newtext.includes(remplazar[i][0])){
@@ -30,5 +35,12 @@ botonEncriptar.addEventListener("click", () => {
         }
         return newtext;
     }
-    console.log(botonEncriptar(texto));
+    const textoEncriptado = botonEncriptar(texto);
+
+    mensajeFinal.innerHTML = textoEncriptado;
+
+
+
+
+    //console.log(botonEncriptar(texto));
 })
