@@ -1,48 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador & Desencriptador</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
     <link rel="icon" type="Image/x-icon" href="assets/codeSonkaPixel.bmp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <a class="headerIcono" href="https://github.com/EDISONKA02" target="_blank">
-            <img src="assets/LogoAlura.png" alt="Logo de Alura" style="width: 3%;height: auto;border-radius: 50%;">
-        </a>
-        <h1 class="headerTitulo">Alura Challenge - Encriptador de textos</h1>
+    <header>
+        <div class="header">
+            <img class="header_logo" src="assets/LogoAlura.png" alt="Logo de Alura">
+        </div>   
     </header>
     <main>
-        <div class="infoGeneral">
-            <h2>¿Que es?</h2>
-            <p>El algoritmo utilizado es Caesar Cipher, que es un tipo de cifrado por sustitución en el que cada letra en el texto original es reemplazada por una letra que se obtiene a partir de la letra original, descuidando el número de posiciones que se indica.</p>
-        </div>
-        <section>
-            <div class="campoIzquierdo">
-                <textarea id="inputText" placeholder="Introduce tu texto aquí..."></textarea>
-                <br>
-                <span class="info">
-                    <img src="assets/signo-de-exclamacion.png" alt="signo de advertencia">
-                    Solo letras minúsculas y sin tildes.</a>
-                </span>
-                <div class="botones">
-                    <button class="boton-encriptar" type="button" onclick="encriptar()">Encriptar</button>
-                    <button class="boton-desencriptar" type="button" onclick="desencriptar()">Desencriptar</button>
+        <div class="main">
+            <div class="contenido_izquierda">
+                <textarea class="textoUsuario" id="textoUsuario" placeholder="Ingrese texto aqui..."></textarea>
+                <div class="contenido_izquierda_footer">
+                    <img src="assets/signo-de-exclamacion.png" alt="" style="width: 16px;">
+                    <span class="informacionAdvertencia">Solo letras minúsculas y sin acentos</span>
+                    <div class="botones-encriptar-desencriptar">
+                        <button class="botonEncriptar" id="botonEncriptar">
+                            Encriptar            
+                        </button>
+                        <button class="botonDesencriptar" id="botonDesencriptar">
+                            Desencriptar
+                        </button>
+                    </div> 
                 </div>
             </div>
-        </section>
-        <div class="campoDerecho">
-            <img src="assets/errores.png" alt="Lupa con error">
-            <h2>Ningún mensaje fue encontrado</h2>
-            <p>¡Debes ingresar primero el texto que quieres encriptar o desencriptar!</p>
+            <div class="contenido_derecha ajustar">
+                <img class="contenido_derecha_muñeco" src="assets/Muñeco.png" alt="icono de buscando">
+                <p class="mensajeFinal ajustar" id="mensajeFinal">Ningún mensaje fue encontrado</p>
+                <p class="informacionMensajeFinal">Ingresa el texto que desees encriptar o desencriptar.</p>
+                <button class="botonCopiar oculto" id="botonCopiar">Copiar</button>
+            </div>
         </div>
+        
+        
     </main>
     <footer>
-        <script src="app.js"></script>
+        <!--<script src="app.js"></script>
         <p>Encriptador realizado por <a href="https://www.linkedin.com/in/eago-sonka/" target="_blank">Édison González</a> para <b>AluraLatam</b></p>
-        <p>Agosto 2024</p>    
+        <p>Agosto 2024</p>-->
     </footer>
+    <script src="./js/script.js"></script>
 </body>
 </html>
