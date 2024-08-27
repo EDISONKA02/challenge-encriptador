@@ -6,6 +6,15 @@
     --color-dark-gray: #495057;
     --font-Andika-Regular: "Andika", sans-serif;
 }
+.modoOscuro {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+}
 
 body{
     background: var(--color-background);
@@ -43,6 +52,7 @@ textarea{
     resize: none;
     border: none;
     outline: none;
+    
 }
 .textoUsuario::placeholder{
     color: var(--color-blue);
@@ -98,12 +108,18 @@ textarea{
     width: 100%;
 }
 .mensajeFinal{
+    background: none;
+    border: none;
+    outline: none;
+    resize: none;
     font-size: 24px;
     font-weight: bold;
     text-align: center;
     color: var(--color-blue);
 }
 .mensajeFinal.ajustar{
+    text-align: left;
+    font-weight: 400px;
     height: 70%;
 }
 .informacionMensajeFinal{
@@ -114,11 +130,31 @@ textarea{
 .botonCopiar{
     width: 100%;
     background-color: transparent;
+    display: none;
     color: var(--color-blue);
 }
-.oculto{
-    display: none;
+body.modo-oscuro {
+    background-color: #17153B;
+    color: #C8ACD6;
 }
+
+.textoUsuario.modo-oscuro {
+    background-color: #2E236C;
+    color: #C8ACD6;
+}
+
+.contenido_derecha.modo-oscuro {
+    background-color: #433D8B;
+}
+
+.botonEncriptar.modo-oscuro,
+.botonDesencriptar.modo-oscuro,
+.botonCopiar.modo-oscuro {
+    background-color: #2E236C;
+    color: #C8ACD6;
+    border: 1px solid #C8ACD6;
+}
+
 @media screen and (max-width:770px){
     .main{
         grid-template-columns: 1fr;
@@ -139,6 +175,11 @@ textarea{
     }
     .contenido_derecha_muñeco{
         display: none;
+    }
+    .textoUsuario {
+        width: 100%; /* Asegura que el textarea ocupe todo el ancho disponible */
+        margin-top: 24px; /* Espacio extra para separar del icono */
+        font-size: 24px; /* Reducir tamaño de fuente si es necesario */
     }
 }
 @media screen and (max-width:500px){
